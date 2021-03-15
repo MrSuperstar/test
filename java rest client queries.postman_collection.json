@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "0a48fae5-6402-422b-8065-4d5c7bb5fb2a",
+		"name": "java rest client queries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Event",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"title\": \"Rock\",\r\n    \"eventType\": \"workshop\",\r\n    \"date\": \"2010-02-03T10:15:30\",\r\n    \"place\": \"Gomel\",\r\n    \"description\": \"There're many reasons to attend this event.\",\r\n    \"topics\": [\r\n        \"Topic 1\", \"Topic 2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Event",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Rock\",\r\n    \"eventType\": \"workshop\",\r\n    \"date\": \"2010-02-03T10:15:30\",\r\n    \"place\": \"Gomel\",\r\n    \"description\": \"There're many reasons to attend this event.\",\r\n    \"topics\": [\r\n        \"Topic 1\", \"Topic 2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
